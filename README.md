@@ -12,8 +12,8 @@ Enter the numbers of [begin], [end], and [n_jobs] (default = 8).  Lidar cloud sh
 
 Execution steps:
 
->0: vox
->output: vox1.ply, vox2.ply, vox4.ply
+0: vox  
+output: vox1.ply, vox2.ply, vox4.ply
 
 1: mn
 
