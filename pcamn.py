@@ -1,17 +1,21 @@
 from time import time
-start = int(input('start: '))
+begin = int(input('begin: '))
+end = int(input('end: '))
+n_jobs = input('n_jobs: ')
+if not n_jobs:
+    n_jobs = 8
 t = time()
 
-if start <= 0:
+if begin <= 0 <= end:
     print('0: vox')
     import vox
     del vox
-if start <= 1:
+if begin <= 1 <= end:
     print('1: mn')
     import mn
     del mn
 
-if start <= 2:
+if begin <= 2 <= end:
     print('2: pcamn')
     from numpy import log2, array, load, save
     from sklearn.decomposition import PCA
@@ -27,7 +31,7 @@ if start <= 2:
     def export_pca(ply_vox, npy_knn, temp_out):
         vox = array(read_point_cloud(ply_vox).points)
         knn = load(npy_knn)
-        save(temp_out, Parallel(-1, verbose=1, temp_folder='cache')(
+        save(temp_out, Parallel(int(n_jobs), verbose=1)(
             delayed(log_var)(vox[n]) for n in knn))
         return None
 
@@ -35,23 +39,23 @@ if start <= 2:
     export_pca('vox2.ply', '128_2.npy', 'pca_2')
     export_pca('vox4.ply', '128_4.npy', 'pca_4')
 
-if start <= 3:
+if begin <= 3 <= end:
     print('3: concat')
     import concat
     del concat
-if start <= 4:
+if begin <= 4 <= end:
     print('4: propagate')
     import propagate
     del propagate
-if start <= 5:
+if begin <= 5 <= end:
     print('5: test')
     import test
     del test
-if start <= 6:
+if begin <= 6 <= end:
     print('6: vis')
     import vis
     del vis
-if start <= 7:
+if begin <= 7 <= end:
     print('7: treetop')
     import treetop
     del treetop
