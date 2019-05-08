@@ -15,32 +15,25 @@ Execution steps:
 0: vox  
 output: vox1.ply, vox2.ply, vox4.ply
 
-1: mn
-
+1: mn  
 output: 128_1.npy, 128_2.npy, 128_4.npy
 
-2: pcamn
-
+2: pcamn  
 output: pca_1.npy, pca_2.npy, pca_4.npy
 
-3: concat
-
+3: concat  
 output: pca.npy
 
-4: propagate
-
+4: propagate  
 output: pca_all.npy
 
-5: test
-
+5: test  
 output: tree.ply
 
-6: vis
-
+6: vis  
 output: vis.ply
 
-7: treetop
-
+7: treetop  
 output: corr.ply
 
 ---
