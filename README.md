@@ -3,6 +3,8 @@ Principal Component Analysis of Multiscale Neighbourhood
 
 Tested in Python 3.6
 
+Dependencies: NumPy, SciPy, Joblib, scikit-learn, Open3D
+
 ---
 ```
 PATH/TO/python.exe pcamn.py
