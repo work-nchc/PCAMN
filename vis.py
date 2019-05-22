@@ -1,5 +1,5 @@
 from open3d import read_point_cloud, write_point_cloud, Vector3dVector
-from sklearn.externals import joblib
+import joblib
 from numpy import load, zeros
 from scipy.special import erf
 
