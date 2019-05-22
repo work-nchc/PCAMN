@@ -1,6 +1,6 @@
 from numpy import load, zeros
 from open3d import read_point_cloud, write_point_cloud, Vector3dVector
-from sklearn.externals import joblib
+import joblib
 
 scaler = joblib.load('scaler.joblib')
 svc = joblib.load('svc.joblib')
