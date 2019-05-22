@@ -19,7 +19,7 @@ if begin <= 2 <= end:
     print('2: pcamn')
     from numpy import log2, array, load, save
     from sklearn.decomposition import PCA
-    from sklearn.externals.joblib import Parallel, delayed
+    from joblib import Parallel, delayed
     from open3d import read_point_cloud
 
     def log_var(pts):
